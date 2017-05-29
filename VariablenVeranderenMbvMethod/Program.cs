@@ -11,10 +11,27 @@ namespace VariablenVeranderenMbvMethod
         static void Main(string[] args)
         {
             MyClass mc = new MyClass();
-            MyStruct ms;
-            Console.WriteLine(mc.Beschrijving);
-            DoSomethingClassy(mc);
-            Console.WriteLine(mc.Beschrijving);
+            MyStruct ms = new MyStruct();
+            ms.Beschrijving = "Hallo";
+            Console.WriteLine(ms.Beschrijving);
+            DoSomethingStructy(ms);
+            Console.WriteLine(ms.Beschrijving); 
+           
+            Console.WriteLine(ms.Beschrijving);
+            DoSomethingStructy(ref ms);
+            Console.WriteLine(ms.Beschrijving);
+        }
+        static void DoSomethingClassy(MyClass c)
+        {
+            c.Beschrijving = "HACKED!";
+        }
+        static void DoSomethingStructy(MyStruct s)
+        {
+            s.Beschrijving = "HACKED?!";
+        }
+        static void DoSomethingStructy(ref MyStruct s)
+        {
+            s.Beschrijving = "HACKED!!";
         }
     }
     struct MyStruct
