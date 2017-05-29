@@ -10,9 +10,14 @@ namespace VariablenVeranderenMbvMethod
     {
         static void Main(string[] args)
         {
+            MyClass mc = new MyClass();
+            MyStruct ms;
+            Console.WriteLine(mc.Beschrijving);
+            DoSomethingClassy(mc);
+            Console.WriteLine(mc.Beschrijving);
         }
     }
-    struct Mystruct
+    struct MyStruct
     {
         public string Beschrijving;
         public int Hoeveelheid;
