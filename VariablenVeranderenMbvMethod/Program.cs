@@ -12,4 +12,9 @@ namespace VariablenVeranderenMbvMethod
         {
         }
     }
+    struct Mystruct
+    {
+        public string Beschrijving;
+        public int Hoeveelheid;
+    }
 }
